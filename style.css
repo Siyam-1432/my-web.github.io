@@ -379,3 +379,72 @@ body.dark .home {
     font-size: 20px;
   }
 }
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    padding: 15px 20px;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .navbar {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .navbar a {
+    margin: 10px;
+    display: inline-block;
+  }
+
+  .home-content {
+    flex-direction: column;
+    gap: 30px;
+    padding-top: 80px;
+    text-align: center;
+  }
+
+  .home-text {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .home-image img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .services-container,
+  .portfolio-box {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service-box,
+  .portfolio-item {
+    width: 90%;
+  }
+
+  .contact form {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .about, .services, .portfolio, .contact {
+    padding: 60px 5%;
+  }
+
+  .footer .social-icons {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .footer {
+    padding: 20px 10px;
+  }
+
+  .btn {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+}
