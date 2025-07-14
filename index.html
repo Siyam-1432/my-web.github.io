@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Siyam's Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">Siyam</div>
+    <nav class="navbar">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="theme-toggle">
+      <label><input type="checkbox" id="themeSwitch" /> 🌙 Dark Mode</label>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="home reveal" id="home">
+    <div class="home-content">
+      <div class="home-text">
+        <h1>Hi, I'm <span>Siyam</span></h1>
+        <h3>Frontend Developer</h3>
+        <p>I build modern and responsive websites.</p>
+        <a href="#contact" class="btn">Hire Me</a>
+        <div class="icon-animation">
+          <i class="fab fa-html5"></i>
+          <i class="fab fa-css3-alt"></i>
+          <i class="fab fa-js"></i>
+        </div>
+      </div>
+      <div class="home-image">
+        <img src="IMG_2022@1583797114 (1).jpg" alt="Siyam's Photo" />
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="about reveal" id="about">
+    <div class="about-content">
+      <h2 class="heading">About <span>Me</span></h2>
+      <p>I'm Siyam, a beginner web developer from Bangladesh. I am a college student and I have recently started learning programming. I want to become a programmer because I love technology and solving problems. My dream is to become a successful and skilled programmer in the future. I believe that with hard work and practice, I can achieve my goal. I am very curious and excited to learn more every day. Programming is not just a subject to me, it's my passion..</p>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="services reveal" id="services">
+    <h2 class="heading">My <span>Services</span></h2>
+    <div class="services-container">
+      <div class="service-box">
+        <h3>Web Design</h3>
+        <p>I design modern and responsive websites using HTML and CSS.</p>
+      </div>
+      <div class="service-box">
+        <h3>Frontend Development</h3>
+        <p>I create interactive UI using JavaScript.</p>
+      </div>
+      <div class="service-box">
+        <h3>APP Design</h3>
+        <p>I focus on user experience and visual design.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio -->
+  <section class="portfolio reveal" id="portfolio">
+    <h2 class="heading">Latest <span>Projects</span></h2>
+    <div class="portfolio-filter">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="web">Web</button>
+      <button class="filter-btn" data-filter="app">App</button>
+    </div>
+    <div class="portfolio-box">
+      <div class="portfolio-item" data-category="web">
+        <img src="commm.jpeg" alt="Web Project 1" />
+        <div class="portfolio-info">
+          <h4>Web Project 1</h4>
+          <p>HTML, CSS website</p>
+        </div>
+      </div>
+      <div class="portfolio-item" data-category="app">
+        <img src="mobile-app-development.jpg" alt="App Project" />
+        <div class="portfolio-info">
+          <h4>App Project</h4>
+          <p>Mobile UI Design</p>
+        </div>
+      </div>
+      <div class="portfolio-item" data-category="web">
+        <img src="commm.jpeg" alt="Web Project 2" />
+        <div class="portfolio-info">
+          <h4>Web Project 2</h4>
+          <p>Landing Page</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact reveal" id="contact">
+    <h2 class="heading">Contact <span>Me</span></h2>
+    <form id="contact-form">
+      <input type="text" name="from_name" placeholder="Your Name" required />
+      <input type="email" name="from_email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+    <p id="form-message"></p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer reveal">
+    <div class="social-icons">
+      <a href="https://facebook.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" /></a>
+      <a href="https://instagram.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" /></a>
+      <a href="https://t.me" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram" /></a>
+      <a href="https://wa.me" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" /></a>
+    </div>
+    <p>© 2025 Siyam. All rights reserved.</p>
+  </footer>
+
+  <!-- EmailJS Library -->
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
