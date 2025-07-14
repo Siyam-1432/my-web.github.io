@@ -1,0 +1,381 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: #0e0e0e;
+  color: white;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  padding: 20px 50px;
+  background: #1f1f1f;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #00ffaa;
+}
+
+.navbar a {
+  color: white;
+  margin-left: 30px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.navbar a:hover {
+  color: #00ffaa;
+}
+
+.theme-toggle {
+  margin-left: 20px;
+  color: #fff;
+}
+
+.home {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10%;
+  background: linear-gradient(135deg, #001f1f, #003333);
+  text-align: center;
+}
+
+.home-content h1 {
+  font-size: 48px;
+  color: #00ffaa;
+}
+
+.home-content h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.home-content p {
+  font-size: 16px;
+  color: #ccc;
+  margin-bottom: 30px;
+}
+
+.btn {
+  padding: 10px 25px;
+  background: #00ffaa;
+  color: #000;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.about, .services, .portfolio, .contact {
+  padding: 80px 10%;
+  text-align: center;
+}
+
+.about .heading,
+.services .heading,
+.portfolio .heading,
+.contact .heading {
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: #00ffaa;
+}
+
+.about p,
+.service-box p,
+.portfolio-info p {
+  color: #ccc;
+  font-size: 16px;
+}
+
+.services-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.service-box {
+  background: #1a1a1a;
+  border: 1px solid #00ffaa40;
+  border-radius: 10px;
+  padding: 30px;
+  width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 20px rgba(0, 255, 170, 0.2);
+}
+
+.service-box h3 {
+  color: #00ffaa;
+  margin-bottom: 10px;
+}
+
+.portfolio-filter button {
+  background: transparent;
+  border: 1px solid #00ffaa;
+  color: #00ffaa;
+  padding: 8px 16px;
+  margin: 5px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+  background: #00ffaa;
+  color: #111;
+}
+
+.portfolio-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.portfolio-item {
+  background: #1a1a1a;
+  width: 280px;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.portfolio-item:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 255, 170, 0.3);
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.portfolio-info {
+  padding: 15px;
+}
+
+.portfolio-info h4 {
+  color: #00ffaa;
+  margin-bottom: 5px;
+}
+
+.contact form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact input,
+.contact textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #444;
+  font-size: 16px;
+  background-color: #222;
+  color: #eee;
+  resize: none;
+}
+
+.contact button {
+  background-color: #00ffaa;
+  color: #111;
+  padding: 12px;
+  border: none;
+  font-size: 16px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.contact button:hover {
+  background-color: #00c399;
+  color: #fff;
+}
+
+#form-message {
+  margin-top: 15px;
+  color: #0f0;
+  font-weight: bold;
+}
+
+.footer {
+  background-color: #111;
+  color: #ccc;
+  text-align: center;
+  padding: 25px 0;
+  margin-top: 50px;
+  border-top: 3px solid #00ffaa;
+}
+
+.footer .social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+.footer .social-icons img {
+  width: 32px;
+  height: 32px;
+  filter: grayscale(50%);
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.footer .social-icons img:hover {
+  transform: scale(1.2);
+  filter: grayscale(0%) brightness(1.3);
+}
+
+.footer p {
+  font-size: 14px;
+  color: #777;
+}
+
+body.dark {
+  background-color: #111;
+  color: #eee;
+}
+
+body.dark .home {
+  background: linear-gradient(to right, #005544, #003355);
+}
+
+/* Reveal Animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  will-change: opacity, transform;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.home-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.home-text {
+  max-width: 500px;
+  text-align: left;
+}
+
+.home-image img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #00ffaa;
+  box-shadow: 0 4px 15px rgba(0, 255, 170, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.home-image img:hover {
+  transform: scale(1.05);
+}
+
+/* === Floating Icons Animation === */
+.floating-icons {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 25px;
+  z-index: 10;
+  animation: floatUpDown 4s ease-in-out infinite;
+}
+
+.icon-circle {
+  width: 60px;
+  height: 60px;
+  background-color: rgba(0, 255, 170, 0.1);
+  border: 2px solid #00ffaa;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: rotateIcon 5s linear infinite;
+  box-shadow: 0 0 10px rgba(0, 255, 170, 0.3);
+}
+
+.icon-circle i {
+  font-size: 24px;
+  color: #00ffaa;
+  animation: pulse 2s infinite;
+}
+
+@keyframes floatUpDown {
+  0%, 100% {
+    transform: translateX(-50%) translateY(0px);
+  }
+  50% {
+    transform: translateX(-50%) translateY(-15px);
+  }
+}
+
+@keyframes rotateIcon {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.15);
+    opacity: 0.7;
+  }
+}
+
+@media (max-width: 600px) {
+  .floating-icons {
+    bottom: 10px;
+    gap: 15px;
+  }
+
+  .icon-circle {
+    width: 50px;
+    height: 50px;
+  }
+
+  .icon-circle i {
+    font-size: 20px;
+  }
+}
