@@ -98,3 +98,19 @@ icons.forEach(icon => {
 
   animateIcon();
 });
+let lastScrollTop = 0;
+const header = document.querySelector('.header');
+
+window.addEventListener('scroll', () => {
+  const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+  if (currentScroll > lastScrollTop) {
+    // নিচে scroll করলে hide
+    header.classList.add('hide');
+  } else {
+    // উপরে scroll করলে show
+    header.classList.remove('hide');
+  }
+
+  lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+});
