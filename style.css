@@ -448,3 +448,21 @@ body.dark .home {
     padding: 10px 20px;
   }
 }
+/* আগেই তোমার CSS ফাইলে থাকা header class-এ কিছু পরিবর্তন করো: */
+.header {
+  position: fixed;
+  width: 100%;
+  padding: 20px 50px;
+  background: #1f1f1f;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  transition: top 0.3s ease;
+  top: 0; /* initial position */
+}
+
+/* যখন hide হবে */
+.header.hide {
+  top: -100px; /* উপরে লুকিয়ে যাবে */
+}
